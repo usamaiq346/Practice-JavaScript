@@ -35,13 +35,24 @@ function sayMyName (){              // () = parameter    // {}= deffination of t
 // function loginUserMessage (userName){
 //     return `${userName} just login right now` // $ {} contain space b/w them it will not work  
 // }
-function loginUserMessage (userName){
-    if(userName === undefined){
-        console.log ("Please enter your name first ") // Please enter ypour name first 
+// function loginUserMessage (userName){
+//     if(userName === undefined){
+//         console.log ("Please enter your name first ") // Please enter ypour name first 
 
-    }
-    return `${userName} just login right now` // $ {} contain space b/w them it will not work  
-}
+//     }
+//     return `${userName} just login right now` // $ {} contain space b/w them it will not work  
+// }
 // console.log(loginUserMessage("Usama"))
 // console.log(loginUserMessage("")) //  just login right now
-console.log(loginUserMessage()) // undefined just login right now
+// console.log(loginUserMessage()) // undefined just login right now
+
+function loginUserMessage (userName = "Login User"){
+    if(!userName){
+        console.log ("Please Enter Your Name First")
+        return
+    }
+    return `${userName } just login right Now`
+}
+console.log(loginUserMessage()) // please Enter your Name First
+console.log(loginUserMessage()) // Login User just login right Now // if assign default value in parameter so is will print atleast default value  
+// console.log(loginUserMessage("Usama")) // Usama just login right Now
