@@ -24,10 +24,24 @@ function sayMyName (){              // () = parameter    // {}= deffination of t
 // addTwoNumbers(2, 5) // 7   
 // addTwoNumbers(2, "3") // 23 
 
-function addTwoNumbers (number1, number2){
-    let result = number1 + number2
-    return  result
-    console.log ("Not print after function return the value")// bt before return it can print 
+// function addTwoNumbers (number1, number2){
+//     let result = number1 + number2
+//     return  result
+//     console.log ("Not print after function return the value")// bt before return it can print 
+// }
+// const result = addTwoNumbers(3, 4)
+// console.log ("Result ",result) // Result  7
+
+// function loginUserMessage (userName){
+//     return `${userName} just login right now` // $ {} contain space b/w them it will not work  
+// }
+function loginUserMessage (userName){
+    if(userName === undefined){
+        console.log ("Please enter your name first ") // Please enter ypour name first 
+
+    }
+    return `${userName} just login right now` // $ {} contain space b/w them it will not work  
 }
-const result = addTwoNumbers(3, 4)
-console.log ("Result ",result) // Result  7
+// console.log(loginUserMessage("Usama"))
+// console.log(loginUserMessage("")) //  just login right now
+console.log(loginUserMessage()) // undefined just login right now
